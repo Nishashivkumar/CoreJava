@@ -1,6 +1,7 @@
 package Practice;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 
 import JavaCollections.arrayList;
@@ -10,10 +11,12 @@ public class arrayPrograms {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		arrayPrograms ap=new arrayPrograms();
-		ap.MaxMinNum();
-		ap.removeDuplicates();
-		ap.arrayList();
-		ap.secondLargest();
+//		ap.MaxMinNum();
+//		ap.removeDuplicates();
+//		ap.arrayList();
+//		ap.secondLargest();
+//		ap.sortArray();
+		sortArray2();
 	}
 	
 	public void MaxMinNum() {
@@ -41,7 +44,7 @@ public class arrayPrograms {
 	public void removeDuplicates() {
 		int array[]= {1,1,2,3,4,4,5,5};
 		ArrayList<Integer> AL = new ArrayList<Integer>();
-		for (int i=0; i<=array.length-1; i++) {
+		for (int i=0; i<array.length; i++) {
 			if(!AL.contains(array[i])) {
 				AL.add(array[i]);
 			}
@@ -92,6 +95,32 @@ public class arrayPrograms {
 		}
 		System.out.println("Largest Number is " + largest);
 		System.out.println("Second Largest Number is " + secLargest);
+	}
+	
+	public void sortArray() {
+		int Array[]= {2,3,4,1};
+		for (int i=0;i<=Array.length-1;i++) {
+			for (int j=0;j<=Array.length-1;j++) {
+				if(Array[i]>Array[j]) {//2>1, 3>2, 4>3, 
+					int temp = Array[i];//temp=2,3, 4
+					Array[i]=Array[j];//Array[i]=1, 2, 3
+					Array[j]=temp;//Array[j]=2, 3, 4
+				}
+				
+			}
+
+			for (int k=0;k<Array.length;k++) {
+				System.out.println(Array[k]);
+			}
+		}
+	}
+	
+	public static void sortArray2() {
+		int Array[]= {1,2,5,6,3,4,9};
+		Arrays.sort(Array);
+		for (int ar: Array) {
+			System.out.println(ar);
+		}
 	}
 	
 

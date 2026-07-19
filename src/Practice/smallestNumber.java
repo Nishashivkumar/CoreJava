@@ -17,5 +17,22 @@ public class smallestNumber {
 		
 
 	}
+	
+	public void secondLargest() {
+		int[] Array = {10,2,6,7,8,5,11};
+		int largest=0;
+		int secLargest=0;
+		
+		for (int i=0;i<=Array.length-1;i++) {
+			if (Array[i]>largest) {
+				secLargest=largest;//10, 
+				largest=Array[i];//11
+				}
+			else if (Array[i]>secLargest) {
+				secLargest=Array[i];//2, 6, 7, 8
+			}
+			
+		}
+	}
 
 }
