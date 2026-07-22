@@ -20,7 +20,7 @@ public class Palindrome {
 		System.out.println("Enter the number");
 		String original=  sc.next();//525
 		String reverse = "";
-		for(int i=original.length()-1; i>=0;i--) {
+		for(int i=original.length(); i>0;i--) {
 //			System.out.println(i);
 			 reverse = reverse + original.charAt(i);
 //			System.out.println(reverse);
